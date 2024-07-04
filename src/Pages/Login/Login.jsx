@@ -52,7 +52,6 @@ const Login = () => {
 
             </div>
             <div className='w-1/2'>
-                {/* <img className='w-96 h-96 ' src={login} alt="" /> */}
             </div>
         </div>
     </div>

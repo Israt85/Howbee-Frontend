@@ -1,9 +1,9 @@
-
-
+import img from '../../assets/profile img.jpeg'
+import { MdCheckBox } from "react-icons/md";
 const Dashboard = () => {
     return (
-        <div className="w-full flex bg-gray-100 min-h-screen">
-            <div className="w-1/3 border-r-2 border-black py-2  h-screen">
+        <div className="w-full flex  min-h-screen">
+            <div className="w-1/3 border-r-2 border-black py-2 ">
             <div className="border-b-2">
             <svg className="px-2 " width="200" height="60" viewBox="0 0 178 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="20" cy="20" r="20" fill="#FFCC00"/>
@@ -102,7 +102,7 @@ const Dashboard = () => {
 
 <h2 className="text-lg">Settings</h2>
        </div>
-       <div className="flex flex-col justify-end h-full">
+       <div className="flex flex-col min-h-screen">
        <div className="flex items-center mt-20 gap-1">
        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 11.625C2.25 6.44782 6.44782 2.25 11.625 2.25C16.8022 2.25 21 6.44782 21 11.625C21 16.8022 16.8022 21 11.625 21C6.44782 21 2.25 16.8022 2.25 11.625ZM11.625 3.75C7.27624 3.75 3.75 7.27624 3.75 11.625C3.75 15.9738 7.27624 19.5 11.625 19.5C15.9738 19.5 19.5 15.9738 19.5 11.625C19.5 7.27624 15.9738 3.75 11.625 3.75Z" fill="#1E293B"/>
@@ -129,8 +129,12 @@ const Dashboard = () => {
        </div>
 
             </div>
+
+            {/* dashboard right part// profile start */}
             <div className="w-full  h-screen">
-             <div className="flex items-center gap-2 p-10">
+            <div className='flex justify-center'>
+            <div>
+            <div className="flex items-center gap-2 p-10">
              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1_151)">
 <path d="M17.575 11.275L18.725 12.425L7.4 23.75H6.25V22.6L17.575 11.275ZM22.075 3.75C21.7625 3.75 21.4375 3.875 21.2 4.1125L18.9125 6.4L23.6 11.0875L25.8875 8.8C26.375 8.3125 26.375 7.525 25.8875 7.0375L22.9625 4.1125C22.7125 3.8625 22.4 3.75 22.075 3.75ZM17.575 7.7375L3.75 21.5625V26.25H8.4375L22.2625 12.425L17.575 7.7375Z" fill="#1C1C1C"/>
@@ -143,7 +147,100 @@ const Dashboard = () => {
 </svg>
 <h2 className="text-xl font-bold">Profile</h2>
              </div>
+             
+             <div className='flex flex-col ml-10'>
+                <img className='w-[240px] h-[240px] rounded-full' src={img} alt="" />
+                <div>
+                     <h2 className='text-xl font-bold py-3'>About</h2>
+                     <textarea className='h-40 bg-slate-100 w-80' name="" id=""></textarea>
+                </div>
+                <div>
+                     <h2 className='text-xl font-bold py-3'>Pricing</h2>
+                <div className='w-96 h-32 bg-slate-100 border'>
+
+</div>
+                </div>
+             </div>
             </div>
+             <div>
+             <div>
+              <div className='min-h-screen'>
+    {/* form of information */}
+    <div className='flex items-center'>
+        <div className='w-96 h-auto px-4 rounded-md bg-white ' >
+            
+            <form className="mr-4 px-6">
+
+
+                <div className="mb-3">
+                    <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Name</label>
+                    <input type="email" className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Mehrab Bozorgi" required />
+                </div>
+                <div className="mb-3">
+                    <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Email</label>
+                    <input type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Mehrabbozorgi.business@gmail.com" required />
+                    
+                    </div>
+                
+                <div className="mb-3">
+                    <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Contact number</label>
+                    <input type="email" className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="58077.79" required />
+                </div>
+                <div className=' flex gap-4'>
+                <div className="mb-3">
+                    <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Gender</label>
+                    <select className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32  p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="" id="">
+                     <option defaultValue="Mehrab">Mehrab</option>
+                    </select>
+                </div>
+                <div className="mb-3">
+                    <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">DOB</label>
+                    <select className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-36 p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="" id="">
+                     <option defaultValue="Bozorgi">Bozorgi</option>
+                    </select>
+                   
+                </div>
+                
+                </div>
+                <div className="mb-3">
+                    <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">User Id</label>
+                    <input type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="33062 Zboncak isle" required />
+                    
+                    </div>
+                    <div className="mb-3">
+                    <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password</label>
+                    <input type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="sbdfbnd65sfdvb s" required />
+                    
+                    </div>
+                   
+                    <div className='mb-3'>
+                     <h2 className='text-lg font-semibold py-2'>Class categories</h2>
+                <div className='w-72 h-20 bg-slate-100 border'>
+                <h2 className='p-2'>Yoga for flexibility, elderly, beginner level classes for all.</h2>
+</div>
+                </div>
+                <div>
+                     <h2 className='text-lg font-semibold py-2'>Available timings</h2>
+                <div className='w-72 h-20 bg-slate-100 border'>
+<p className='p-2'>7-10 AM, 4-7 PM</p>
+</div>
+                </div>
+                
+            </form>
+
+            <div className='flex w-60 p-6 justify-center items-center gap-4'>
+            <button type="submit" className=" w-1/2 border-2 border-yellow-400 text-yellow-400 font-bold focus:ring-4 focus:outline-none focus:ring-blue-300  rounded text-sm px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cancel</button>
+            <button type="submit" className=" w-1/2 bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded text-sm px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+             </div>
+             </div>
+            </div>
+           
         </div>
     );
 };
