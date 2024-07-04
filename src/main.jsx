@@ -8,6 +8,7 @@ import {
 import MainLayout from './Layout/MainLayout';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/Signup/Signup';
+import Dashboard from './Pages/Dashboard/Dashboard';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {path: "/signup",
   element:<Signup></Signup>
 
+  },
+  {
+    path:'/dashboard',
+    element: <Dashboard></Dashboard>
   }
 ]);
 
