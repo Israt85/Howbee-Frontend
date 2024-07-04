@@ -7,7 +7,7 @@ const Signup = () => {
         <div><div className='min-h-screen bg-gray-100'>
     
         <div className='flex items-center'>
-            <div className='w-96 h-auto px-4 rounded-md py-10 bg-white ' >
+            <div className='w-96 h-auto px-4 rounded-md py-5 bg-white ' >
                 
                 <form className=" p-6">
                     <div className="flex gap-2 flex-col justify-center items-center h-auto my-2">
