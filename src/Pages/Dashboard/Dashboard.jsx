@@ -1,9 +1,11 @@
 import img from '../../assets/profile img.jpeg'
-import { MdCheckBox } from "react-icons/md";
 const Dashboard = () => {
+
+    
+
     return (
         <div className="w-full flex  min-h-screen">
-            <div className="w-1/3 border-r-2 border-black py-2 ">
+            <div className="w-1/3 border-r-2 border-gray-400 py-2 ">
             <div className="border-b-2">
             <svg className="px-2 " width="200" height="60" viewBox="0 0 178 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="20" cy="20" r="20" fill="#FFCC00"/>
@@ -152,12 +154,31 @@ const Dashboard = () => {
                 <img className='w-[240px] h-[240px] rounded-full' src={img} alt="" />
                 <div>
                      <h2 className='text-xl font-bold py-3'>About</h2>
-                     <textarea className='h-40 bg-slate-100 w-80' name="" id=""></textarea>
+                     <textarea className='h-40 p-2 bg-slate-100 w-80' name="" id="" defaultValue='Mehrab Bozorgi'></textarea>
                 </div>
                 <div>
                      <h2 className='text-xl font-bold py-3'>Pricing</h2>
                 <div className='w-96 h-32 bg-slate-100 border'>
+                <p className='flex justify-between px-2'>
+                 <span className='defaultValue   py-1 border-gray-400 '>Thrice a week</span>
+                 <span>$__</span>
 
+                </p>
+                <p className='flex justify-between px-2'>
+                 <span className='defaultValue  py-1 border-gray-400 '>Twice a week</span>
+                 <span>$__</span>
+
+                </p>
+                <p className='flex justify-between px-2'>
+                 <span className='defaultValue  py-1 border-gray-400 '>Monday to Friday</span>
+                 <span>$__</span>
+
+                </p>
+                <p className='flex justify-between px-2'>
+                 <span className='defaultValue  py-1 border-gray-400 '>Elderly</span>
+                 <span>$__</span>
+
+                </p>
 </div>
                 </div>
              </div>
@@ -167,35 +188,87 @@ const Dashboard = () => {
               <div className='min-h-screen'>
     {/* form of information */}
     <div className='flex items-center'>
-        <div className='w-96 h-auto px-4 rounded-md bg-white ' >
+        <div className='w-96 mt-6 h-auto px-4 rounded-md bg-white ' >
             
             <form className="mr-4 px-6">
 
 
                 <div className="mb-3">
                     <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Name</label>
-                    <input type="email" className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Mehrab Bozorgi" required />
+                    <input type="email" className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:defaultValue-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue="Mehrab Bozorgi" required />
                 </div>
                 <div className="mb-3">
                     <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Email</label>
-                    <input type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Mehrabbozorgi.business@gmail.com" required />
+{/* Change email modal */}
+
+                    <input  onClick={()=>document.getElementById('my_modal_1').showModal()} type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:defaultValue-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue="Mehrabbozorgi.business@gmail.com" required />
+                    <dialog id="my_modal_1" className="modal modal-bottom sm:modal-middle">
+
+{/* under modal  */}
+<div className="modal-box w-[300px] bg-[#D9D9D9]">
+<h3 className="font-bold text-lg">Save Changes</h3>
+<div className="mb-3">
+      <label className="block text-white">Change Email</label>
+      <input type="email" className="bg-[rgb(248,243,243)] text-sm rounded focus:border-blue-500 block w-full p-2.5 " placeholder="abc@gmail.com" required />
+  </div>
+  <div className="mb-1">
+      <label className="block text-white dark:text-white">OTP</label>
+      <input type="email" className="bg-[rgb(248,243,243)] text-sm rounded focus:border-blue-500 block w-full p-2.5 "placeholder='------'  required />
+  </div>
+  <h2>02:00</h2>
+<div className="modal-action justify-start">
+<form method="dialog">
+{/* if there is a button in form, it will close the modal */}
+<button className="btn text-white bg-[#888888] hover:bg-[#888888]">Save</button>
+</form>
+</div>
+</div>
+</dialog>
                     
                     </div>
                 
                 <div className="mb-3">
                     <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Contact number</label>
-                    <input type="email" className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="58077.79" required />
+
+                    {/* change mobile no modal */}
+                    <input onClick={()=>document.getElementById('my_modal_3').showModal()} type="email" className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:defaultValue-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue="58077.79" required />
+                    <dialog id="my_modal_3" className="modal modal-bottom sm:modal-middle">
+
+              {/* under modal  */}
+  <div className="modal-box w-[300px] bg-[#D9D9D9]">
+    <h3 className="font-bold text-lg">Save Changes</h3>
+    <div className="mb-3">
+                    <label className="block text-white">Change Phone No.</label>
+                    <input type="email" className="bg-[rgb(248,243,243)] text-sm rounded focus:border-blue-500 block w-full p-2.5 " placeholder="+91 1234567890" required />
+                </div>
+                <div className="mb-1">
+                    <label className="block text-white dark:text-white">OTP</label>
+                    <input type="email" className="bg-[rgb(248,243,243)] text-sm rounded focus:border-blue-500 block w-full p-2.5 "placeholder='------'  required />
+                </div>
+                <h2>02:00</h2>
+    <div className="modal-action justify-start">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn text-white bg-[#888888] hover:bg-[#888888]">Save</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+
                 </div>
                 <div className=' flex gap-4'>
                 <div className="mb-3">
                     <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Gender</label>
-                    <select className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32  p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="" id="">
+                    <select className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32  p-2.5 dark:bg-gray-700 dark:defaultValue-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  name="" id="">
                      <option defaultValue="Mehrab">Mehrab</option>
                     </select>
                 </div>
                 <div className="mb-3">
                     <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">DOB</label>
-                    <select className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-36 p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="" id="">
+                    <select className="bg-slate-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-36 p-2.5 dark:bg-gray-700 dark:defaultValue-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="" id="">
                      <option defaultValue="Bozorgi">Bozorgi</option>
                     </select>
                    
@@ -204,12 +277,12 @@ const Dashboard = () => {
                 </div>
                 <div className="mb-3">
                     <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">User Id</label>
-                    <input type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="33062 Zboncak isle" required />
+                    <input type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:defaultValue-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue="33062 Zboncak isle" required />
                     
                     </div>
                     <div className="mb-3">
                     <label className="block mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password</label>
-                    <input type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="sbdfbnd65sfdvb s" required />
+                    <input type="email" className="bg-slate-100 relative text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:defaultValue-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" defaultValue="sbdfbnd65sfdvb s" required />
                     
                     </div>
                    
@@ -230,9 +303,30 @@ const Dashboard = () => {
 
             <div className='flex w-60 p-6 justify-center items-center gap-4'>
             <button type="submit" className=" w-1/2 border-2 border-yellow-400 text-yellow-400 font-bold focus:ring-4 focus:outline-none focus:ring-blue-300  rounded text-sm px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cancel</button>
-            <button type="submit" className=" w-1/2 bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded text-sm px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
-            </div>
+            <button  onClick={()=>document.getElementById('my_modal_5').showModal()} type="submit" className=" w-1/2 bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded text-sm px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
 
+              {/* under modal  */}
+  <div className="modal-box w-[300px] bg-[#D9D9D9]">
+    <h3 className="font-bold text-lg">Save Changes</h3>
+    <div className="mb-3">
+                    <label className="block text-white">Verify via email</label>
+                    <input type="email" className="bg-[rgb(248,243,243)] text-sm rounded focus:border-blue-500 block w-full p-2.5 " placeholder="Enter your email adress" required />
+                </div>
+                <h2 className='text-xl text-black font-bold text-center'>OR</h2>
+                <div className="mb-3">
+                    <label className="block text-white dark:text-white">Verify via Phone No.</label>
+                    <input type="email" className="bg-[rgb(248,243,243)] text-sm rounded focus:border-blue-500 block w-full p-2.5 "placeholder='Enter your phone number'  required />
+                </div>
+    <div className="modal-action justify-start">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn text-white bg-[#888888] hover:bg-[#888888]">Verify</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+            </div>
         </div>
     </div>
 </div>
